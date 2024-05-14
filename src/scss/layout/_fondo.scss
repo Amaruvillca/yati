@@ -1,32 +1,38 @@
-
-
-.izquierda{
-    background-color: rgb(255, 255, 255);
-    center{
-        padding-top: 3%;
-        .logo{
-            border-radius: 50%;
-            width: 120px;
-        }
-        .logo--nombre{
-            padding-top: 3%;
-            padding-bottom: 3%;
+.lo {
+    display: flex;
+    justify-content: center;
+    
+    .logo-login {
+        display: grid;
+        padding-top: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        align-items: center; /* Centra verticalmente */
+        justify-items: center; /* Centra horizontalmente */
+    }
+    
+     .logo {
+        width: 100px;
+        border-radius: 50%;
+        .logo-login-nombre {
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
+    
+    
 }
-.derecha{
-    background-color: rgb(0, 0, 0);
-}
-.formulario{
-    padding: 0 10% 0px 10%;
-    display: block;
-    .form--login{
-        display: block;
+.formularo{
+    display: grid;
+    padding: 0 10% 0 10%;
+    padding-top: 3%;
+    .form-label{
+        height: 20px;
+    }
+    .form-input{
+        height: 30px;
+        padding-top: 2px;
+
     }
 }
-.for{
-    display: block;
-}
-.in-login{
-    height: 50px;
-}
+
+
