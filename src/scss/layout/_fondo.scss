@@ -1,6 +1,8 @@
+@use 'variables' as v;
 .lo {
     display: flex;
     justify-content: center;
+    
     
     .logo-login {
         display: grid;
@@ -34,5 +36,36 @@
 
     }
 }
+.logo-login-nombre{
+    font-family:v.$fuente_principal ;
+}
+.los{
+    display: inline-block;
+    justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+.botones{
+    padding-top: 8%;
+
+    .btn-orange {
+        color: #fff;
+        background-color: v.$naranja; /* Cambiamos el color a naranja */
+        border-color: v.$naranja; /* Cambiamos el color del borde a naranja */
+        &:hover {
+            color: #fff;
+            background-color: v.$naranja; /* Cambiamos el color de fondo al pasar el mouse */
+            border-color: v.$naranja; /* Cambiamos el color del borde al pasar el mouse */
+        }
+    }
+    p{
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+}
+
+
+
 
 
