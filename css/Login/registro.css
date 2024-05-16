@@ -1,7 +1,7 @@
 :root {
     /* variable */
     /* colores */
-    --banco: #fff;
+    --blanco: #fff;
     --negro: #000;
     --naranja: #f3873f;
 
@@ -30,8 +30,8 @@ body {
 
 
 .regisrto {
-    background-color: var(--banco);
-    height: 100%;
+    background-color: var(--blanco);
+    height: auto;
 }
 .formulario {
     display: grid;
@@ -64,12 +64,23 @@ label {
     justify-content: right;
     width: 100%;
 }
+.formulario--formulario__yaeresusuario_contraseña{
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.formulario--formulario__yaeresusuario_contraseña p span a {
+    color: var(--naranja);
+}
 input[type="text"].form-control,
 input[type="email"].form-control,
 input[type="password"].form-control,
 input[type="submit"].form-control {
     height: 50px;
 }
+
 .formulario--formulario__yaeresusuario p span a {
     color: var(--naranja);
 }
@@ -81,7 +92,7 @@ input[type="submit"].form-control {
 }
 .formulario--formulario--botones .btn-naranja {
     background-color: var(--naranja); /* Color de fondo naranja */
-    color: var(--banco); /* Color del texto blanco */
+    color: var(--blanco); /* Color del texto blanco */
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
@@ -94,7 +105,7 @@ input[type="submit"].form-control {
 /* Efecto hover */
 .btn-naranja:hover {
     background-color: #ff934c; /* Cambio suave de color de fondo */
-    color: #fff; /* Cambio suave del color del texto a blanco */
+    color: var(--blanco); /* Cambio suave del color del texto a blanco */
 }
 .uso p {
     text-align: center;
@@ -123,9 +134,9 @@ input[type="submit"].form-control {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    background-color: #fff; /* Color de fondo */
-    border: 2px solid #000; /* Borde de 2px negro */
-    color: #000; /* Color del texto */
+    background-color: var(--banco); /* Color de fondo */
+    border: 2px solid var(--negro); /* Borde de 2px negro */
+    color: var(--negro); /* Color del texto */
     font-size: 16px;
     font-weight: bold;
 
@@ -145,7 +156,7 @@ input[type="submit"].form-control {
 /* Cambios al pasar el mouse sobre el botón */
 .btn-google:hover {
     background-color: #000; /* Cambia el color de fondo al pasar el mouse */
-    color: #fff; /* Cambia el color del texto al pasar el mouse */
+    color: var(--blanco); /* Cambia el color del texto al pasar el mouse */
 }
 .centrar {
     display: flex;
@@ -158,4 +169,14 @@ input[type="submit"].form-control {
 
 .contenido {
     text-align: center; /* Centra el texto horizontalmente */
+}
+@media screen and (max-width: 767px) {
+    body {
+        background-image: none; /* Elimina la imagen de fondo en dispositivos móviles */
+        background-color: var(--blanco); /* Cambia el color de fondo a blanco */
+    }
+    .formulario--formulario__yaeresusuario_contraseña{
+        padding-top: 5%;
+        font-size: 0.8rem;
+    }
 }
