@@ -1,0 +1,111 @@
+:root{
+    /* variable */
+    /* colores */
+    --banco:#fff;
+    --negro:#000;
+    --naranha: #f3873f;
+
+    /* tipografia */
+    --tipografia_principal:'Poetsen';
+
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: var(--negro); /* Cambia el color de fondo del body */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    overflow-x: hidden; 
+}
+
+html, body {
+    height: 100%;
+}
+main {
+   
+}
+.regisrto {
+    background-color: var(--banco);
+    height: 100%;
+    
+    
+}
+.formulario{
+    display: grid;
+    place-items: center;
+    height: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    
+    
+}
+.formulario--logo{
+    width: 150px;
+    border-radius: 50%;
+    padding-top: 5%;
+    
+}
+.fromulario--titulo{
+    padding-top: 5%;
+    font-family: var(--tipografia_principal);
+
+    
+}
+.formulario--formulario{
+    width: 100%;
+}
+.formulario--formulario__campos{
+    padding-top: 5%;
+}
+label{
+    padding-bottom: 2%;
+}
+.formulario--formulario__yaeresusuario{
+    display: flex;
+    padding-top: 2%;
+    justify-content: right;
+    width: 100%;
+}
+input[type="text"].form-control,
+input[type="email"].form-control,
+input[type="password"].form-control,
+input[type="submit"].form-control {
+    height: 50px; 
+}
+.formulario--formulario__yaeresusuario p span a{
+    color: var(--naranha);
+}
+.formulario--formulario--botones{
+    padding-top: 5%;
+}
+.formulario--formulario--botones p{
+    text-align: center;
+    
+    
+}
+.formulario--formulario--botones .btn-naranja{
+    color: var(--banco);
+    background-color: var(--naranha);
+}
+.uso p{
+    text-align: center;
+    font-size: 0.8rem;
+
+    position: relative;
+    bottom: 0;
+   padding-top: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+    
+    /* Añade espacio para que el texto no esté pegado al borde */
+    
+}
+.invitado p{
+    font-size: 0.9rem;
+}
+.lo{
+    margin: 0;
+    padding: 0;
+    
+}
