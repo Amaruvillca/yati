@@ -44,7 +44,7 @@ body {
     padding-right: 7%;
 }
 .formulario--logo {
-    width: 130px;
+    width: 150px;
     border-radius: 50%;
     
 }
@@ -53,7 +53,7 @@ body {
     font-family: var(--tipografia_principal);
 }
 .formulario--formulario {
-    width: 90%;
+    width: 95%;
 }
 .formulario--formulario__campos {
     padding-top: 5%;
@@ -181,7 +181,7 @@ input[type="submit"].form-control {
     }
     .formulario--formulario__yaeresusuario_contraseña{
         padding-top: 5%;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .regisrto{
         padding-top: 10%;
