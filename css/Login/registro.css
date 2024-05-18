@@ -44,7 +44,7 @@ body {
     padding-right: 7%;
 }
 .formulario--logo {
-    width: 150px;
+    width: 130px;
     border-radius: 50%;
     
 }
@@ -186,7 +186,11 @@ input[type="submit"].form-control {
     .regisrto{
         padding-top: 10%;
     }
-    
+    .formulario--logo {
+        width: 150px;
+        
+        
+    }
 }
 .ingrese{
     text-align: center;
