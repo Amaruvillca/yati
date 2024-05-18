@@ -19,6 +19,7 @@ body {
     display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; 
+    /*cambio de forma de imagen*/
 }
 
 html,
@@ -41,16 +42,16 @@ body {
     padding-right: 7%;
 }
 .formulario--logo {
-    width: 150px;
+    width: 130px;
     border-radius: 50%;
-    padding-top: 5%;
+    padding-top: 30%;
 }
 .fromulario--titulo {
-    padding-top: 5%;
+    padding-top: 2%;
     font-family: var(--tipografia_principal);
 }
 .formulario--formulario {
-    width: 100%;
+    width: 90%;
 }
 .formulario--formulario__campos {
     padding-top: 5%;
