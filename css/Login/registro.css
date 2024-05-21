@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 body {
-    background-image: url(../../img/fondo4.avif); /* Cambia el color de fondo del body */
+    background-image: url(../../img/fondo3.jpg); /* Cambia el color de fondo del body */
     overflow-x: hidden;
     display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
@@ -51,10 +51,11 @@ body {
     font-family: var(--tipografia_principal);
 }
 .formulario--formulario {
-    width: 95%;
+    width: 93%;
 }
 .formulario--formulario__campos {
     padding-top: 3%;
+    
 }
 label {
     padding-bottom: 1%;
@@ -167,7 +168,9 @@ input[type="submit"].form-control {
 }
 
 
-
+.conteiner{
+    padding-bottom: 100%;
+}
 
 .contenido {
     text-align: center; /* Centra el texto horizontalmente */
@@ -193,6 +196,9 @@ input[type="submit"].form-control {
         color: red;
         font-size: 0.8em;
         display: none;
+    }
+    .formulario--formulario {
+        width: 98%;
     }
 }
 .ingrese{
