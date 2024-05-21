@@ -13,13 +13,11 @@ a {
     text-decoration: none;
 }
 body {
-    background-image: url(../../img/fondo2.jpg); /* Cambia el color de fondo del body */
-    margin: 0; /* Elimina el margen predeterminado del body */
-    padding: 0; /* Elimina el relleno predeterminado del body */
+    background-image: url(../../img/fondo4.avif); /* Cambia el color de fondo del body */
     overflow-x: hidden;
     display: flex; /* Usa flexbox para centrar el contenido */
     justify-content: center; /* Centra horizontalmente */
-    align-items: center; 
+    
     /*cambio de forma de imagen*/
 }
 
@@ -34,7 +32,7 @@ body {
 .regisrto {
     background-color: var(--blanco);
     height: auto;
-    padding-top: 35%;
+    padding-top: 5%;
 }
 .formulario {
     display: grid;
@@ -191,6 +189,11 @@ input[type="submit"].form-control {
         
         
     }
+    .error {
+        color: red;
+        font-size: 0.8em;
+        display: none;
+    }
 }
 .ingrese{
     text-align: center;
@@ -202,9 +205,12 @@ input[type="submit"].form-control {
 }
 .error {
     color: red;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: none;
 }
 .is-invalid {
     border-color: red;
+}
+.container{
+    height: 100%;
 }
