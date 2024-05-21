@@ -56,10 +56,10 @@ body {
     width: 95%;
 }
 .formulario--formulario__campos {
-    padding-top: 5%;
+    padding-top: 3%;
 }
 label {
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 .formulario--formulario__yaeresusuario {
     display: flex;
@@ -199,4 +199,12 @@ input[type="submit"].form-control {
 }
 .t{
     text-align: center;
+}
+.error {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+.is-invalid {
+    border-color: red;
 }
