@@ -13,8 +13,9 @@ a {
     text-decoration: none;
 }
 body {
-    background-image: url(../../img/jh.jpg); /* Cambia el color de fondo del body */
+    background-image: url(../../img/l.jpeg); /* Cambia el color de fondo del body */
     background-position: center;
+    
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -132,7 +133,7 @@ input[type="submit"].form-control {
     padding: 0;
 }
 .lo2{
-    background-image: url(../../img/edu.jpg);
+    background-image: url(../../img/fondo4.avif);
 }
 .btn-google {
     display: inline-flex;
