@@ -55,7 +55,7 @@ $email = $_POST['email'];
                                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         //$email = $_POST['email'];
                                     
-                                        // Verificar si el correo electrónico está en la base de datos
+                                        //Verificar si el correo electrónico está en la base de datos
                                         $conexion = new Conexion();
                                         $conn = $conexion->obtenerConexion();
                                     
