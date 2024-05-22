@@ -1,0 +1,47 @@
+<?php
+// Asegúrate de incluir el archivo que contiene la clase de conexión
+
+// Verificar si se han enviado los datos del formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener los datos del formulario
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Crear una instancia de la clase de conexión
+    $conexion = new Conexion();
+
+    // Obtener la conexión
+    $conn = $conexion->obtenerConexion();
+
+    // Verificar si el nombre de usuario ya está registrado
+    $sql = "SELECT * FROM usuarios WHERE nombre_usuario = '$nombre'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // El nombre de usuario ya está en uso
+        echo "<script>alert('El nombre de usuario ya está en uso.')</script>";
+    } else {
+        // Verificar si el correo electrónico ya está registrado
+        $sql = "SELECT * FROM usuarios WHERE gmail = '$email'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            // El correo electrónico ya tiene una cuenta asociada
+            echo "<script>alert('El correo electrónico ya tiene una cuenta asociada.')</script>";
+        } else {
+            // Insertar el nuevo usuario en la base de datos
+            $sql = "INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo) VALUES ('$nombre', '$email', '$password', 'usuario')";
+            if ($conn->query($sql) === TRUE) {
+                // Usuario registrado con éxito
+                echo "<script>alert('Usuario registrado con éxito. Redireccionando a ingreso.php...')</script>";
+                echo "<script>setTimeout(function() { window.location.href = 'ingreso.php'; }, 5000);</script>";
+            } else {
+                // Error al registrar el usuario
+                echo "<script>alert('Error al registrar el usuario: " . $conn->error . "')</script>";
+            }
+        }
+    }
+
+    // Cerrar la conexión
+    $conexion->cerrarConexion();
+}
+?>

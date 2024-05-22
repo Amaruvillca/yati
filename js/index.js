@@ -56,3 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona la etiqueta
+    const etiqueta = document.getElementById('etiqueta');
+  
+    // Remueve la etiqueta después de 5 segundos
+    setTimeout(function() {
+      etiqueta.classList.remove('etiqueta'); // Añade la clase 'oculto' para esconder la etiqueta
+    }, 5000);
+  });

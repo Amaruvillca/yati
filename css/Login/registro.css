@@ -224,3 +224,6 @@ input[type="submit"].form-control {
 .container{
     height: 100%;
 }
+.oculto {
+    opacity: 0;
+  }
