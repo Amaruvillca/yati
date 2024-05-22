@@ -43,7 +43,7 @@ $password = $_POST['password'];
                                     <div class="formulario--formulario__campos">
                                         <label for="email">Correo Electrónico:</label>
                                         <input type="email" class="form-control" placeholder="afsfsdsd@gmail.com" aria-label="Username" aria-describedby="basic-addon1" name="email" id="email" value="<?php  echo $email ?>" required>
-                                        <div id="emailError" class="error">El correo electrónico debe contener un '@'.</div>
+                                        <div id="emailError" class="error">El correo electrónico debe contener un '@' o un .</div>
                                     </div>
                                     <div class="formulario--formulario__campos">
                                         <label for="password">Contraseña:</label>
@@ -123,9 +123,10 @@ $password = $_POST['password'];
                                             <div class="col-2 d-flex justify-content-center align-items-center">
                                                 <p class="centrar">o</p>
                                             </div>
-                                            <a href="#" class="btn-google col-5">
-                                                <i class="fab fa-google icon-google"></i> Google
+                                            <a href="#" class="btn-google col-5" onclick="openGoogleAuthPopup(); return false;">
+                                                <i class="fab fa-google icon-google" ></i> Google
                                             </a>
+   
                                         </div>
                                     </div>
                                 </form>

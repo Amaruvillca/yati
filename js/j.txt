@@ -1,44 +1,44 @@
 <?php
-// Asegúrate de incluir el archivo que contiene la clase de conexión
+// Conexión a la base de datos
+require 'Conexion.php';
 
-// Verificar si se han enviado los datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $nombre = $_POST["nombre"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+    $email = $_POST['email'];
 
-    // Crear una instancia de la clase de conexión
+    // Verificar si el correo electrónico está en la base de datos
     $conexion = new Conexion();
-
-    // Obtener la conexión
     $conn = $conexion->obtenerConexion();
 
-    // Verificar si el nombre de usuario ya está registrado
-    $sql = "SELECT * FROM usuarios WHERE nombre_usuario = '$nombre'";
+    $sql = "SELECT id_usuario FROM usuarios WHERE gmail = '$email'";
     $result = $conn->query($sql);
+
     if ($result->num_rows > 0) {
-        // El nombre de usuario ya está en uso
-        echo "<script>alert('El nombre de usuario ya está en uso.')</script>";
-    } else {
-        // Verificar si el correo electrónico ya está registrado
-        $sql = "SELECT * FROM usuarios WHERE gmail = '$email'";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            // El correo electrónico ya tiene una cuenta asociada
-            echo "<script>alert('El correo electrónico ya tiene una cuenta asociada.')</script>";
+        // El correo electrónico existe, generar y guardar el token
+        $token = bin2hex(random_bytes(32)); // Generar token único
+        $expiry_date = date('Y-m-d H:i:s', strtotime('+1 hour')); // Fecha de expiración del token
+
+        // Guardar el token en la base de datos
+        $sql = "UPDATE usuarios SET token = '$token', fecha_expiracion_token = '$expiry_date' WHERE gmail = '$email'";
+        if ($conn->query($sql) === TRUE) {
+            // Enviar correo electrónico con el token al usuario
+            $to = $email;
+            $subject = 'Restablecer contraseña - Yatiñi';
+            $message = 'Para restablecer tu contraseña, haz clic en el siguiente enlace: http://tudominio.com/restablecer.php?token=' . $token;
+            $headers = 'From: tuemail@tudominio.com';
+            mail($to, $subject, $message, $headers);
+
+            echo '<div class="alert alert-success" role="alert">
+                    Se ha enviado un enlace de restablecimiento de contraseña a tu correo electrónico.
+                </div>';
         } else {
-            // Insertar el nuevo usuario en la base de datos
-            $sql = "INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo) VALUES ('$nombre', '$email', '$password', 'usuario')";
-            if ($conn->query($sql) === TRUE) {
-                // Usuario registrado con éxito
-                echo "<script>alert('Usuario registrado con éxito. Redireccionando a ingreso.php...')</script>";
-                echo "<script>setTimeout(function() { window.location.href = 'ingreso.php'; }, 5000);</script>";
-            } else {
-                // Error al registrar el usuario
-                echo "<script>alert('Error al registrar el usuario: " . $conn->error . "')</script>";
-            }
+            echo '<div class="alert alert-danger" role="alert">
+                    Error al generar el token. Por favor, inténtalo de nuevo más tarde.
+                </div>';
         }
+    } else {
+        echo '<div class="alert alert-danger" role="alert">
+                El correo electrónico proporcionado no está registrado.
+            </div>';
     }
 
     // Cerrar la conexión

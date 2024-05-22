@@ -73,3 +73,25 @@ function ocultarMensajes() {
 document.addEventListener('DOMContentLoaded', function() {
     ocultarMensajes();
 });
+function openGoogleAuthPopup() {
+    // URL de autenticación de Google
+    var authUrl = 'https://accounts.google.com/o/oauth2/auth?client_id=TU_CLIENT_ID&redirect_uri=URL_DE_REDIRECCION&response_type=code&scope=email%20profile';
+    
+    // Configura el tamaño y otras propiedades de la ventana emergente
+    var width = 600;
+    var height = 600;
+    var left = (screen.width - width) / 2;
+    var top = (screen.height - height) / 2;
+    var options = 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left;
+  
+    // Abre la ventana emergente
+    var authWindow = window.open(authUrl, 'googleAuthWindow', options);
+  
+    // Maneja el cierre de la ventana emergente (opcional)
+    var timer = setInterval(function() {
+      if (authWindow.closed) {
+        clearInterval(timer);
+        // Aquí puedes realizar acciones adicionales si la ventana emergente se cierra
+      }
+    }, 1000);
+  }

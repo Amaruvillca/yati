@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                     <div class="formulario--formulario__yaeresusuario_contraseña">
-                                        <p><a href="recuperarContra.html">¿Olvidaste tu contraseña?</a></p>
+                                        <p><a href="recuperarContra.php">¿Olvidaste tu contraseña?</a></p>
                                         <p>¿No eres usuario?<span><a href="index.php"> Crear</a></span> </p>
                                     </div>
                                     <div class="container">
