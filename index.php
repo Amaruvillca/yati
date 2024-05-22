@@ -1,5 +1,8 @@
 <?php
 require 'Conexion.php';
+$nombre = $_POST['nombre'];
+                                    $email = $_POST['email'];
+                                    $password = $_POST['password'];
 ?>
 
 <!DOCTYPE html>
@@ -33,18 +36,19 @@ require 'Conexion.php';
                                 <form id="registroForm" action="index.php" method="post">
                                     <div class="formulario--formulario__campos">
                                         <label for="nombre">Nombre de Usuario:</label>
-                                        <input type="text" class="form-control" placeholder="Ejemplo: alva2000" aria-label="Username" aria-describedby="basic-addon1" name="nombre" id="nombre" required>
+                                        <input type="text" class="form-control" placeholder="Ejemplo: alva2000" aria-label="Username" aria-describedby="basic-addon1" name="nombre" id="nombre" value="<?php  echo $nombre?>" required>
+
                                         <div id="nombreError" class="error">El nombre de usuario debe tener más de 5 caracteres.</div>
                                     </div>
                                     <div class="formulario--formulario__campos">
                                         <label for="email">Correo Electrónico:</label>
-                                        <input type="email" class="form-control" placeholder="afsfsdsd@gmail.com" aria-label="Username" aria-describedby="basic-addon1" name="email" id="email" required>
+                                        <input type="email" class="form-control" placeholder="afsfsdsd@gmail.com" aria-label="Username" aria-describedby="basic-addon1" name="email" id="email" value="<?php  echo $email ?>" required>
                                         <div id="emailError" class="error">El correo electrónico debe contener un '@'.</div>
                                     </div>
                                     <div class="formulario--formulario__campos">
                                         <label for="password">Contraseña:</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" placeholder="Introduce tu contraseña" aria-label="Contraseña" aria-describedby="togglePassword" name="password" id="password" required>
+                                            <input type="password" class="form-control" placeholder="Introduce tu contraseña" aria-label="Contraseña" aria-describedby="togglePassword" name="password" id="password" value="<?php  echo $password ?>" required>
                                             <button class="btn btn-outline-secondary" type="button" id="togglePassword" name="password">
                                                 <i class="far fa-eye"> </i>
                                             </button>
@@ -52,14 +56,14 @@ require 'Conexion.php';
                                         <div id="passwordError" class="error">La contraseña debe tener al menos 8 caracteres, incluyendo números, letras mayúsculas y minúsculas.</div>
                                     </div>
                                     <div class="formulario--formulario__yaeresusuario">
-                                        <p>¿Ya eres usuario?<span><a href="ingreso.html"> Acceso</a></span> </p>
+                                        <p>¿Ya eres usuario?<span><a href="ingreso.php"> Acceso</a></span> </p>
                                     </div>
                                     <?php
+                                    // Obtener los datos del formulario
+                                    
                                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                        // Obtener los datos del formulario
-                                        $nombre = $_POST['nombre'];
-                                        $email = $_POST['email'];
-                                        $password = $_POST['password'];
+                                        
+                                        
 
                                         // Crear una instancia de la clase de conexión
                                         $conexion = new Conexion();
