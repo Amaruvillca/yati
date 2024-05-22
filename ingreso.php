@@ -84,11 +84,6 @@
         </div>
     </main>
 
-
-
-
-
-    
     <script src="js/bootrap/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
