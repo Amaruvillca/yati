@@ -9,6 +9,8 @@ CREATE TABLE usuarios (
     token VARCHAR(100) NULL,
     fecha_expiracion_token DATETIME NULL
 );
+ALTER TABLE usuarios
+ADD contrasena VARCHAR(100) NOT NULL AFTER gmail;
 
 CREATE TABLE categoria(
     id_categoria INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -36,3 +38,14 @@ CREATE TABLE califica(
    FOREIGN KEY (id_juego) REFERENCES juegos(id_juego),
    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );
+INSERT INTO usuarios (nombre_usuario, gmail, tipo)
+VALUES ('alva2000', '76595194amaru@gmail.com', 'administrador');
+
+UPDATE usuarios
+SET contrasena = '70680819Amaru'
+WHERE id_usuario = 1;
+INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo)
+VALUES ('carlos2000', '77574524carlos@gmail.com', '77574524Carlos', 'usuario');
+
+
+
