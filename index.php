@@ -1,8 +1,8 @@
 <?php
 require 'Conexion.php';
 $nombre = $_POST['nombre'];
-                                    $email = $_POST['email'];
-                                    $password = $_POST['password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 ?>
 
 <!DOCTYPE html>
