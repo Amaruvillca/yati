@@ -57,12 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Función para ocultar los mensajes de alerta después de un cierto tiempo
+function ocultarMensajes() {
+    // Selecciona todos los elementos con la clase "alert" y recórrelos
+    var mensajes = document.querySelectorAll('.alert');
+    mensajes.forEach(function(mensaje) {
+        // Oculta cada mensaje después de 4 segundos
+        setTimeout(function() {
+            mensaje.style.display = 'none';
+        }, 5000); // 4000 milisegundos = 4 segundos
+    });
+}
+
+// Llama a la función para ocultar los mensajes cuando el documento esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    // Selecciona la etiqueta
-    const etiqueta = document.getElementById('etiqueta');
-  
-    // Remueve la etiqueta después de 5 segundos
-    setTimeout(function() {
-      etiqueta.classList.remove('etiqueta'); // Añade la clase 'oculto' para esconder la etiqueta
-    }, 5000);
-  });
+    ocultarMensajes();
+});
