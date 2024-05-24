@@ -92,7 +92,7 @@ $conexion->cerrarConexion();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Cerrar sesión</a>
+                        <a class="nav-link" style="color: wheat;" href="logout.php">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
