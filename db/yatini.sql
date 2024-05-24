@@ -47,8 +47,6 @@ WHERE id_usuario = 1;
 INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo)
 VALUES ('carlos2000', '77574524carlos@gmail.com', '77574524Carlos', 'usuario');
 
-ALTER TABLE juegos
-ADD archivo_juego VARCHAR(100) NOT NULL;
 
 ALTER TABLE juegos
 ADD archivo_comprimido LONGBLOB NOT NULL AFTER  edad;
