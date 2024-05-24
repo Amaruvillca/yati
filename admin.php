@@ -85,10 +85,11 @@ $conexion->cerrarConexion();
     <!-- Barra de navegación -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Panel Administrativo</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <span class="navbar-brand mb-0 h1">Panel Administrativo</span>
+            <button class="btn btn-dark d-md-none" id="sidebarToggle"><i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -100,7 +101,7 @@ $conexion->cerrarConexion();
     </nav>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" href="#">
@@ -128,12 +129,16 @@ $conexion->cerrarConexion();
     <!-- Contenido -->
     <div class="content">
         <h2>Dashboard</h2>
-        <h2>Hola <?php echo $nombre_administrador ?></h2>
+        <h2>Hola <?php echo $nombre_administrador ?></h2><h2>Hola <?php echo $nombre_administrador ?></h2>
         <p>Bienvenido al panel administrativo.</p>
     </div>
 
     <!-- Bootstrap JS (opcional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
