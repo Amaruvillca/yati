@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <section  class="col-lg-6 col-md-6 col-sm-12 col-12 d-none d-md-block lo2">
-                    p
+                    
                 </section>
                 <section class="col-lg-6 col-md-6 col-sm-12 col-12 lo">
                     <div class="regisrto">

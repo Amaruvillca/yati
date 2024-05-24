@@ -64,7 +64,7 @@ $email = $_POST['email'];
                                     
                                         if ($result->num_rows > 0) {
                                             // El correo electrónico existe, generar y guardar el token
-                                            $token = bin2hex(random_bytes(32)); // Generar token único
+                                            $token = bin2hex(random_bytes(3)); // Generar token único
                                             $expiry_date = date('Y-m-d H:i:s', strtotime('+1 hour')); // Fecha de expiración del token
                                     
                                             // Guardar el token en la base de datos
