@@ -21,7 +21,6 @@ $stmt->fetch();
 $stmt->close();
 $conexion->cerrarConexion();
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,12 +40,13 @@ $conexion->cerrarConexion();
         .sidebar {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -250px;
             height: 100%;
             width: 250px;
             padding: 20px 0;
             background-color: #343a40;
             color: #fff;
+            transition: all 0.3s ease;
         }
 
         .sidebar ul.nav flex-column {
@@ -65,8 +65,18 @@ $conexion->cerrarConexion();
         }
 
         .content {
-            margin-left: 250px;
+            margin-left: 0;
             padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                left: 0;
+            }
+
+            .content {
+                margin-left: 250px;
+            }
         }
     </style>
 </head>
@@ -76,7 +86,16 @@ $conexion->cerrarConexion();
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Panel Administrativo</span>
-            <a href="ingreso.php" class="btn btn-danger">Cerrar sesión</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
