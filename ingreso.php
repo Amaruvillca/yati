@@ -1,3 +1,12 @@
+<?php
+session_start();
+$gmail = $_POST['email'];
+$contrasena = $_POST['password'];
+
+require_once 'conexion.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -36,14 +45,14 @@
                                         <label for="email">Correo Electrónico:</label>
                                         <input type="email" class="form-control" placeholder="Introdusca su cotrreo electronico"
                                             aria-label="Username" aria-describedby="basic-addon1" name="email"
-                                            id="email" required>
+                                            id="email" value="<?php  echo $gmail ?>" required>
                                     </div>
 
                                     <div class="formulario--formulario__campos">
                                         <label for="password">contraseña:</label>
                                         <div class="input-group">
                                             <input type="password" class="form-control" placeholder="Introduce tu contraseña"
-                                                aria-label="Contraseña" aria-describedby="togglePassword" name="password" id="password" required>
+                                                aria-label="Contraseña" aria-describedby="togglePassword" name="password" id="password" value="<?php  echo $contrasena ?>" required>
                                             <button class="btn btn-outline-secondary" type="button" id="togglePassword" name="password">
                                                 <i class="far fa-eye"></i>
                                             </button>
@@ -53,6 +62,53 @@
                                         <p><a href="recuperarContra.php">¿Olvidaste tu contraseña?</a></p>
                                         <p>¿No eres usuario?<span><a href="index.php"> Crear</a></span> </p>
                                     </div>
+                                    <?php
+                                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                       
+                                    
+                                        // Instanciar la clase Conexion
+                                        $conexion = new Conexion();
+                                        // Obtener la conexión
+                                        $conn = $conexion->obtenerConexion();
+                                    
+                                        // Consulta para verificar si el correo electrónico está registrado
+                                        $stmt = $conn->prepare("SELECT id_usuario, tipo, contrasena FROM usuarios WHERE gmail = ?");
+                                        $stmt->bind_param("s", $gmail);
+                                        $stmt->execute();
+                                        $stmt->store_result();
+                                    
+                                        if ($stmt->num_rows > 0) {
+                                            // El correo electrónico está registrado, comprobar la contraseña
+                                            $stmt->bind_result($id_usuario, $tipo, $contrasena_bd);
+                                            $stmt->fetch();
+                                    
+                                            if ($contrasena == $contrasena_bd) {
+                                                // Contraseña correcta, iniciar sesión
+                                                $_SESSION['id_usuario'] = $id_usuario;
+                                                $_SESSION['tipo'] = $tipo;
+                                    
+                                                if ($tipo == 'administrador') {
+                                                    header("Location: admin.php");
+                                                } elseif ($tipo == 'usuario') {
+                                                    header("Location: usuario.php");
+                                                }
+                                            } else {
+                                                // Contraseña incorrecta
+                                                echo '<div id="etiqueta" class="alert alert-danger" role="alert">
+                                                    Contraseña incorrecta. Por favor, inténtalo de nuevo.
+                                                </div>';
+                                            }
+                                        } else {
+                                            // Correo electrónico no registrado
+                                            echo '<div id="etiqueta" class="alert alert-danger" role="alert">
+                                                Correo electrónico no registrado.
+                                            </div>';
+                                        }
+                                    
+                                        // Cerrar la conexión
+                                        $stmt->close();
+                                        $conexion->cerrarConexion();}
+                                ?>
                                     <div class="container">
                                         <div class="formulario--formulario--botones row ">
                                             <button type="submit" class="btn btn-naranja col-5">Iniciar</button>
