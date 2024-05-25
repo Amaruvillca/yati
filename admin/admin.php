@@ -100,12 +100,12 @@ $conn->close();
 
     <div class="conteiner">
         <div class="row " style="margin-left: 180px;">
-            <div class="col-md-12">
+            <div class="col-md-12 b">
                 <canvas id="usuariosChart"></canvas>
             </div>
-            <div class="col-md-12">
+            <!-- <div class="col-md-12">
                 <canvas id="juegosChart"></canvas>
-            </div>
+            </div> -->
         </div>
     </div>
 

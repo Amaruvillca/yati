@@ -57,3 +57,6 @@ ADD estado_revision ENUM('En revisión', 'Aprobado', 'Rechazado') NOT NULL DEFAU
 select* from usuarios;
 ALTER TABLE usuarios
 ADD estado ENUM('activo', 'no activo') NOT NULL DEFAULT 'activo';
+ALTER TABLE juegos
+ADD fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER Descripcion;
+
