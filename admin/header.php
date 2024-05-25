@@ -65,17 +65,17 @@ $conexion->cerrarConexion();
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link <?php if ($currentPage == 'Categoria') echo 'actives'; ?>" href="categoria.php">
                     <i class="fas fa-th"></i> Categorías
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link <?php if ($currentPage == 'Juegos') echo 'actives'; ?>" href="juegos.php">
                     <i class="fas fa-gamepad"></i> Juegos
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link <?php if ($currentPage == 'En revision') echo 'actives'; ?>" href="revicsion.php">
                     <i class="fas fa-exclamation-circle"></i> En revisión
                 </a>
             </li>
