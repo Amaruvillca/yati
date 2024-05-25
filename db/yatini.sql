@@ -54,4 +54,6 @@ ALTER TABLE juegos
 ADD estado_revision ENUM('En revisión', 'Aprobado', 'Rechazado') NOT NULL DEFAULT 'En revisión';
 
 
-
+select* from usuarios;
+ALTER TABLE usuarios
+ADD estado ENUM('activo', 'no activo') NOT NULL DEFAULT 'activo';

@@ -88,7 +88,7 @@ require_once 'conexion.php';
                                                 $_SESSION['tipo'] = $tipo;
                                     
                                                 if ($tipo == 'administrador') {
-                                                    header("Location: admin.php");
+                                                    header("Location: admin/admin.php");
                                                 } elseif ($tipo == 'usuario') {
                                                     header("Location: usuario.php");
                                                 }
