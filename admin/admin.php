@@ -117,7 +117,7 @@ $conn->close();
         var usuariosData = {
             labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
             datasets: [{
-                label: "Usuarios Registrados",
+                label: "Usuarios Registrados        ",
                 data: <?php echo json_encode($usuariosPorMes); ?>,
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
