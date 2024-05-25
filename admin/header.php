@@ -65,7 +65,7 @@ $conexion->cerrarConexion();
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ($currentPage == 'Categoria') echo 'actives'; ?>" href="categoria.php">
+                <a class="nav-link <?php if ($currentPage == 'Categorias') echo 'actives'; ?>" href="categorias.php">
                     <i class="fas fa-th"></i> Categorías
                 </a>
             </li>

@@ -44,7 +44,7 @@
                     $conexion = new Conexion();
                     $conn = $conexion->obtenerConexion();
 
-                    $usuariosPorPagina = 15;
+                    $usuariosPorPagina = 100;
                     $paginaActual = isset($_GET['page']) ? $_GET['page'] : 1;
                     $offset = ($paginaActual - 1) * $usuariosPorPagina;
 
