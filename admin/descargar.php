@@ -1,4 +1,3 @@
-
 <?php
 require_once '../conexion.php';
 
@@ -15,12 +14,9 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
     $stmt->fetch();
     $stmt->close();
 
-    // Generar el nombre del archivo comprimido
-    $nombre_archivo = $nombre_juego . ".zip";
-
     // Establecer encabezados para la descarga
     header("Content-Type: application/zip");
-    header("Content-Disposition: attachment; filename=\"$nombre_archivo\"");
+    header("Content-Disposition: attachment; filename=\"$nombre_juego.zip\"");
     header("Content-Length: " . strlen($archivo_comprimido));
 
     // Enviar el archivo comprimido al navegador para su descarga
