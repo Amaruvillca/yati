@@ -66,8 +66,9 @@
                         echo "</tr>";
                     }
 
-                    function obtenerNombreCategoria($conn, $id_categoria) {
+                    function obtenerNombreCategoria($conn, $id_categoria,) {
                         $stmt = $conn->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria = ?");
+                        
                         $stmt->bind_param("i", $id_categoria);
                         $stmt->execute();
                         $stmt->bind_result($nombre_categoria);
