@@ -61,31 +61,30 @@ body {
 .table {
     margin-top: 20px;
 }
-.logo_name{
+.logo_name {
     padding-bottom: 5px;
     border-bottom: rgb(145, 141, 141) solid 1px;
 }
 nav.navbar.navbar-dark.bg-dark {
     position: fixed;
 }
-.usu{
+.usu {
     color: white;
     text-decoration: none;
     padding-right: 10px;
 }
-.k{
+.k {
     padding-right: 5px;
 }
 .sidebar .nav-link.actives {
-    background: #000000 !important  ;/* Color de fondo del enlace activo */
+    background: #000000 !important  ; /* Color de fondo del enlace activo */
     font-weight: bold; /* Texto en negrita para el enlace activo */
 }
 
 .sidebar .nav-link.actives i {
-    background: #000000 ;
+    background: #000000;
     color: #fff; /* Color del icono del enlace activo */
 }
-
 
 .card {
     border: none;
@@ -127,19 +126,51 @@ nav.navbar.navbar-dark.bg-dark {
 .btn-primary:hover {
     background-color: #0056b3;
 }
-.card{
+.card {
     margin-top: 50px;
 }
-.pe{
+.pe {
     display: inline;
 }
-.b{
+.b {
     height: auto;
 }
-.tea{
+.tea {
     width: 33.33%;
     text-align: center;
 }
-.juegos{
+.juegos {
     margin-left: 180px;
+}
+.aprobado, .en-revision, .rechazado{
+    text-align: center !important;
+    
+}
+.aprobado p{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(8, 184, 66) !important;
+    border-radius:10px;
+}
+.en-revision p{
+    
+    color: rgb(255, 255, 255) !important;
+    background-color: orange !important;
+    border-radius:10px;
+}
+.rechazado p{
+    
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(231, 56, 56) !important;
+    border-radius:10px;
+}
+
+.edi {
+    margin-bottom: 10px;
+
+}
+.po{
+    text-align: center;
+}
+.EDIT{
+    margin-right: 10px;
 }

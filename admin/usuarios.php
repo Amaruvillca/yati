@@ -61,7 +61,9 @@
                         echo "<td>" . $row['contrasena'] . "</td>";
                         echo "<td>" . $row['tipo'] . "</td>";
                         echo "<td><span class='badge " . ($row['estado'] == 'activo' ? 'bg-success' : 'bg-danger') . "'>" . $row['estado'] . "</span></td>";
-                        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modalUsuario" . $row['id_usuario'] . "'>Ver Detalles</button></td>";
+                        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modalUsuario" . $row['id_usuario'] . "'>VER</button>
+                        <button type='button' class='btn btn-info' data-bs-toggle='modal' data-bs-target='#modalUsuario" . $row['id_usuario'] . "'>JUEGOS</button>
+                        </td>";
                         echo "</tr>";
 
                         echo "<div class='modal fade' id='modalUsuario" . $row['id_usuario'] . "' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
