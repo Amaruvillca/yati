@@ -19,6 +19,7 @@ $stmt->execute();
 $stmt->bind_result($nombre_administrador);
 $stmt->fetch();
 $stmt->close();
+
 $conexion->cerrarConexion();
 ?>
 
@@ -75,7 +76,7 @@ $conexion->cerrarConexion();
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php if ($currentPage == 'En revision') echo 'actives'; ?>" href="revicsion.php">
+                <a class="nav-link <?php if ($currentPage == 'En revision') echo 'actives'; ?>" href="revision.php">
                     <i class="fas fa-exclamation-circle"></i> En revisión
                 </a>
             </li>
