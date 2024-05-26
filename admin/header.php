@@ -6,7 +6,7 @@ require_once '../conexion.php';
 // Verificar si el usuario ha iniciado sesión y si es administrador
 if (!isset($_SESSION['id_usuario']) || $_SESSION['tipo'] !== 'administrador') {
     // Si el usuario no ha iniciado sesión o no es administrador, redirigirlo a la página de inicio de sesión
-    header("Location: login.php");
+    header("Location: ../ingreso.php");
     exit; // Asegura que el script se detenga aquí
 }
 
@@ -77,6 +77,11 @@ $conexion->cerrarConexion();
             <li class="nav-item">
                 <a class="nav-link <?php if ($currentPage == 'En revision') echo 'actives'; ?>" href="revicsion.php">
                     <i class="fas fa-exclamation-circle"></i> En revisión
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <?php if ($currentPage == 'Rechazados') echo 'actives'; ?>" href="rechazados.php">
+                    <i class="fas fa-times-circle"></i> Rechazados
                 </a>
             </li>
         </ul>
