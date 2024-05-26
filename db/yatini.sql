@@ -55,8 +55,83 @@ ADD estado_revision ENUM('En revisión', 'Aprobado', 'Rechazado') NOT NULL DEFAU
 
 
 select* from usuarios;
+INSERT INTO categoria (nombre_categoria) VALUES ('Matemáticas');
 ALTER TABLE usuarios
 ADD estado ENUM('activo', 'no activo') NOT NULL DEFAULT 'activo';
 ALTER TABLE juegos
 ADD fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER Descripcion;
+select*from categoria;
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+INSERT INTO juegos (
+    nombre_juego,
+    imagen_juego,
+    Descripcion,
+    url_juego,
+    edad,
+    id_categoria,
+    id_usuario,
+    archivo_comprimido,
+    estado_revision,
+    fecha_creacion
+) VALUES (
+    'Juego de Matemáticas',
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/l2.jpeg'), -- Ruta del archivo de imagen
+    'Un juego educativo para aprender matemáticas básicas.',
+    'https://www.ejemplo.com/juego-matematicas',
+    7, -- Edad recomendada
+    1, -- ID de la categoría correspondiente
+    1, -- ID del usuario que está añadiendo el juego
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/CODIGO.rar'), -- Ruta del archivo comprimido
+    'En revisión',
+    NOW() -- Fecha de creación
+);
+INSERT INTO juegos (
+    nombre_juego,
+    imagen_juego,
+    Descripcion,
+    url_juego,
+    edad,
+    id_categoria,
+    id_usuario,
+    archivo_comprimido,
+    estado_revision,
+    fecha_creacion
+) VALUES (
+    'Juego de razonamineto',
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/l2.jpeg'), -- Ruta del archivo de imagen
+    'juegos ',
+    'https://www.ejemplo.com/juego-matematicas',
+    8, -- Edad recomendada
+    1, -- ID de la categoría correspondiente
+    1, -- ID del usuario que está añadiendo el juego
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/CODIGO.rar'), -- Ruta del archivo comprimido
+    'En revisión',
+    NOW() -- Fecha de creación
+);
+select * from juegos;
+INSERT INTO juegos (
+    nombre_juego,
+    imagen_juego,
+    Descripcion,
+    url_juego,
+    edad,
+    id_categoria,
+    id_usuario,
+    archivo_comprimido,
+    estado_revision,
+    fecha_creacion
+) VALUES (
+    'chezz',
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/l2.jpeg'), -- Ruta del archivo de imagen
+    'juegos ',
+    'https://www.ejemplo.com/juego-matematicas',
+    10, -- Edad recomendada
+    1, -- ID de la categoría correspondiente
+    1, -- ID del usuario que está añadiendo el juego
+    LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/CODIGO.rar'), -- Ruta del archivo comprimido
+    'En revisión',
+    NOW() -- Fecha de creación
+);
+select * from categoria;
 
