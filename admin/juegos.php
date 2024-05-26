@@ -48,7 +48,7 @@
                     $conexion = new Conexion();
                     $conn = $conexion->obtenerConexion();
 
-                    $stmt = $conn->query("SELECT * FROM juegos");
+                    $stmt = $conn->query("SELECT * FROM juegos WHERE estado_revision='Aprobado'");
                     while ($row = $stmt->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $row['id_juego'] . "</td>";
