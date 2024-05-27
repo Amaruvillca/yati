@@ -75,7 +75,7 @@
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5" style="margin-left: 180px;">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="card">
@@ -95,7 +95,10 @@
                                     <input type="file" class="custom-file-input" id="imagen_juego" name="imagen_juego" accept="image/*" required onchange="previewImage(this)">
                                     <label class="custom-file-label" for="imagen_juego">Seleccionar archivo</label>
                                 </div>
+                                <center>
                                 <img id="preview" class="preview-image" src="#" alt="Vista previa de la imagen" style="display: none;">
+                                </center>
+                                
                             </div>
                             <div class="form-group">
                                 <label for="descripcion_juego">Descripción del juego:</label>
