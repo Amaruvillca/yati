@@ -45,7 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verificar si se ha insertado correctamente el nuevo juego
         if ($stmt->affected_rows > 0) {
-            echo "¡El juego se ha creado correctamente!";
+            //echo "¡El juego se ha creado correctamente!";
+            header("Location: revision.php");
         } else {
             echo "Error al crear el juego. Por favor, inténtalo de nuevo.";
         }

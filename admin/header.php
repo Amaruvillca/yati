@@ -85,6 +85,11 @@ $conexion->cerrarConexion();
                     <i class="fas fa-times-circle"></i> Rechazados
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link <?php if ($currentPage == 'Mis Juegos') echo 'actives'; ?>" href="#">
+                    <i class="fas fa-folder-open"></i> Mis juegos
+                </a>
+            </li>
         </ul>
     </div>
 
