@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatiñi Juegos</title>
+    <title>Yatiñi Rechazado</title>
     <?php
     $currentPage = 'Rechazados';
     include 'header.php';
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="content">
-        <h2 class="mb-4">Juegos</h2>
+        <h2 class="mb-4">Rechazado</h2>
         <!-- Campo de búsqueda -->
         
         <div class="container">
@@ -53,7 +53,11 @@
                         echo "<tr>";
                         echo "<td>" . $row['id_juego'] . "</td>";
                         echo "<td>" . $row['nombre_juego'] . "</td>";
-                        echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['imagen_juego']) . "' alt='Imagen de juego' style='max-width: 100px; max-height: 100px;'></td>";
+                        echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['imagen_juego']) . "' alt='Imagen de juego' style='max-width: 100px; max-height: 100px;'>
+                        
+                        </td>";
+                       
+
                         echo "<td>" . $row['Descripcion'] . "</td>";
                         echo "<td><a href='" . $row['url_juego'] . "' target='_blank'>Ver juego</a></td>";
                         echo "<td>" . $row['edad'] . "</td>";

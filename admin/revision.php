@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatiñi Juegos</title>
+    <title>Yatiñi En revision</title>
     <?php
     $currentPage = 'En revision';
     include 'header.php';
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="content">
-        <h2 class="mb-4">Juegos</h2>
+        <h2 class="mb-4">En revision</h2>
         <!-- Campo de búsqueda -->
         
         <div class="container">
