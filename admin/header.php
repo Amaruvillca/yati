@@ -4,7 +4,7 @@ session_start();
 require_once '../conexion.php';
 
 // Verificar si el usuario ha iniciado sesión y si es administrador
-if (!isset($_SESSION['id_usuario']) || $_SESSION['tipo'] !== 'administrador') {
+if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'administrador') {
     // Si el usuario no ha iniciado sesión o no es administrador, redirigirlo a la página de inicio de sesión
     header("Location: ../ingreso.php");
     exit; // Asegura que el script se detenga aquí

@@ -1,0 +1,241 @@
+.navbar {
+    background-color: white !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+}
+
+.logo img {
+    width: 50px;
+    margin-left: 15px;
+    padding-right: 8px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px !important;
+
+}
+.botonam{
+    margin-right: 10px;
+    
+}
+.busqueda {
+    width: 40%;
+    height: 100%;
+   
+}
+.busqueda_input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group-text {
+    background-color: white;
+    border-left: 0;
+}
+.input-group-text i {
+    font-size: 1.5rem;
+}
+.bonton_icono{
+    display: grid;
+    place-content: center;
+}
+.bus{
+    padding-left: 25px;
+    
+}
+.bus,.bus2{
+    border-radius: 100px;
+    outline: black !important; /* Elimina el borde azul */
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: none;
+}
+.bus:focus,
+.bus:focus-within {
+    outline: none;
+    border-color: black; /* Cambia el color del borde a negro cuando está enfocado */
+}
+.bus:active{
+    border-color: black;
+}
+.voz{
+    border:none;
+    display: grid;
+    place-content: center;
+}
+.voz:hover{
+    background-color: white;
+    color: black;
+}
+.voz i:hover{
+   color: black; 
+
+}
+@media (max-width: 992px) {
+    .busqueda {
+        width: auto !important; /* Full width when collapsed */
+         height: auto;/* Flex to take up remaining space */
+    }
+    .botones{
+       display: none !important;
+       
+    }
+    .busqueda{
+        display: none !important;
+    }
+    .notificaciones{
+        display: none !important;
+    }
+   .iconos{
+    display: flex;
+    justify-content: left !important;
+   }
+   .p{
+    display: inline !important;
+    margin-left: 5px;
+}
+.fav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px !important;
+}
+}
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.espacio{
+    margin-right: 5px;
+}
+.orange{
+    background-color: #ff934c; border-color: #ff934c;
+}
+.orange:hover{
+    background-color: #f87f2e; border-color: #ff934c;
+}
+.regi{
+    border:black solid 2px;
+    font-weight: 2rem !important;
+}
+.colap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col{
+border: none;
+color: black;
+}
+.col:hover{
+    background-color: white;
+    color: black;
+}
+.iconos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p{
+    display: none;
+}
+.inicio_registro a{
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color:#ff934c;
+}
+.inicio_registro{
+    padding-bottom: 10px;
+    border-bottom: rgb(153, 150, 150) solid 2px;
+    width: 10000000px;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 5px;
+}
+.btn-close{
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    padding-top: 40px !important;
+    padding-right: 40px !important;
+}
+.offcanvas-body{
+    padding-top: 2px;
+}
+.offcanvas-header{
+    padding-bottom: 2px;
+}
+.fav{
+    padding-left: 0px;
+}
+.offcanvas{
+    width: 55% !important;
+    
+   
+}
+.listas{
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+}
+.categorias{
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+}
+.listas li a:hover{
+color: #f87f2e !important;
+}
+.categorias li a:hover{
+    color: #f87f2e !important;
+}
+.navbar.fixed-top {
+    transition: top 0.3s !important;
+}
+
+.navbar.hidden {
+    top: -100px !important;
+}
+a:focus, a:active {
+    outline: none !important;
+    background-color: transparent !important; /* Para quitar el color de fondo */
+   
+}
+li{
+list-style: none;
+}
+
+.inicia-sesion-btn {
+
+    background-color: #f87f2e;
+    color: #FFF;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    padding-bottom: 6px;
+}
+
+.cerrar-sesion-icon {
+    font-size: 24px;
+}
+.salir{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(240, 114, 114);
+}
+.mis{
+    margin-right: 30px;
+}
+/* Estilos para el botón */
+

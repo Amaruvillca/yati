@@ -84,13 +84,14 @@ require_once 'conexion.php';
                                     
                                             if ($contrasena == $contrasena_bd) {
                                                 // Contraseña correcta, iniciar sesión
+                                               
                                                 $_SESSION['id_usuario'] = $id_usuario;
                                                 $_SESSION['tipo'] = $tipo;
                                     
                                                 if ($tipo == 'administrador') {
                                                     header("Location: admin/admin.php");
                                                 } elseif ($tipo == 'usuario') {
-                                                    header("Location: usuario.php");
+                                                    header("Location: user/usuario.php");
                                                 }
                                             } else {
                                                 // Contraseña incorrecta
@@ -129,7 +130,7 @@ require_once 'conexion.php';
                                     Yatiñi y que recibo correos electrónicos y actualizaciones.</p>
                             </div>
                             <div class="invitado">
-                                <p><a href="#">Ingresar como invitado</a></p>
+                                <p><a href="user/usuario.php">Ingresar como invitado</a></p>
                             </div>
                         </div>
 

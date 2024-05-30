@@ -1,5 +1,21 @@
 <?php
+session_start();
+
+if (isset($_SESSION['id_usuario']) && $_SESSION['tipo'] == 'usuario') {
+    echo '<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>';
+    echo '<script>
+        setTimeout(function() {
+            window.location.href = "user/usuario.php";
+        }, 3000); // 3 segundos
+    </script>';
+    exit();
+}
+?>
+<?php
 require 'Conexion.php';
+
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -140,7 +156,7 @@ $password = $_POST['password'];
                                 </p>
                             </div>
                             <div class="invitado">
-                                <p><a href="#">Ingresar como invitado</a></p>
+                                <p><a href="user/usuario.php">Ingresar como invitado</a></p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +173,7 @@ $password = $_POST['password'];
     <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
     
-
+  
 </body>
 
 </html>
