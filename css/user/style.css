@@ -210,7 +210,7 @@ list-style: none;
 
 .inicia-sesion-btn {
 
-    background-color: #f87f2e;
+    
     color: #FFF;
     border: none;
     border-radius: 50%;
@@ -221,7 +221,7 @@ list-style: none;
     align-items: center;
     justify-content: center;
     margin-right: 30px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 }
 
 .cerrar-sesion-icon {
@@ -239,3 +239,48 @@ list-style: none;
 }
 /* Estilos para el botón */
 
+.A { background-color: #000000; color: #FFFFFF; } /* Rojo medio oscuro */
+.B { background-color: #287eb8; color: #FFFFFF; } /* Azul medio oscuro */
+.C { background-color: #208d4d; color: #FFFFFF; } /* Verde medio oscuro */
+.D { background-color: #8d7208; color: #FFFFFF; } /* Amarillo medio oscuro */
+.E { background-color: #662f7c; color: #FFFFFF; } /* Morado medio oscuro */
+.F { background-color: #6e3706; color: #FFFFFF; } /* Naranja medio oscuro */
+.G { background-color: #096452; color: #FFFFFF; } /* Verde agua medio oscuro */
+.H { background-color: #F39C12; color: #FFFFFF; } /* Naranja claro */
+.I { background-color: #1ABC9C; color: #FFFFFF; } /* Turquesa medio oscuro */
+.J { background-color: #C0392B; color: #FFFFFF; } /* Rojo oscuro */
+.K { background-color: #2980B9; color: #FFFFFF; } /* Azul oscuro */
+.L { background-color: #8E44AD; color: #FFFFFF; } /* Morado oscuro */
+.M { background-color: #D35400; color: #FFFFFF; } /* Naranja oscuro */
+.N { background-color: #2C3E50; color: #FFFFFF; } /* Gris oscuro */
+.O { background-color: #34495E; color: #FFFFFF; } /* Gris medio */
+.P { background-color: #86073c; color: #FFFFFF; } /* Gris medio oscuro */
+.Q { background-color: #034127; color: #FFFFFF; } /* Gris claro oscuro */
+.R { background-color: #243744; color: #FFFFFF; } /* Gris claro */
+.S { background-color: #630547; color: #FFFFFF; } /* Gris claro medio */
+.T { background-color: #ff0000; color: #FFFFFF; } /* Gris claro muy claro */
+.U { background-color: #025506; color: #FFFFFF; } /* Gris claro oscuro */
+.V { background-color: #3f3f3f; color: #FFFFFF; } /* Gris medio claro */
+.W { background-color: #111e1f; color: #FFFFFF; } /* Gris medio oscuro */
+.X { background-color: #012529; color: #FFFFFF; } /* Gris oscuro medio */
+.Y { background-color: #4D5656; color: #FFFFFF; } /* Gris oscuro */
+.Z { background-color: #2C3E50; color: #FFFFFF; } /* Gris oscuro */
+
+.usucomp{
+    margin-bottom: 15px;
+}
+.usucomp button,
+.usucomp p {
+    display: inline;
+
+}
+.usucomp a{
+    display: inline;
+}
+
+.usucomp button {
+    margin-right: 10px;
+}
+.usucomp a {
+    margin-right: 10px;
+}

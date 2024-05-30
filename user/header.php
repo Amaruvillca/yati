@@ -58,7 +58,16 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
                     <div class="inicio_registro">
                         <?php
                         if ($estado) {
-                            # code...
+                        ?>
+                        <div class="usucomp">
+                            <button class=" <?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?> inicia-sesion-btn " data-bs-placement="bottom"><?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?></button>
+                            <p><?php echo $nombre_usuario; ?></p>
+                        </div>
+                        <div class="usucomp">
+                        <a href="cerrar_sesion.php" class="salir navbar-text"><i class="material-icons cerrar-sesion-icon">exit_to_app</i></a>
+                            <a href="cerrar_sesion.php">Cerrar Sesion</a>
+                        </div>
+                        <?php
                         } else {
                             echo '   <a href="#">Iniciar sesión</a>
                     <a href="#">Regístrate</a>';
@@ -97,7 +106,7 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
                 </form>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Publicar un juego</a>
+                        <a class="nav-link active" aria-current="page" href="#">publicar un juego</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Top Juegos</a>
@@ -118,15 +127,15 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
                     <?php
                     if ($estado) {
                     ?>
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
-                 
-                    <li class="nav-item mis">
-                        <a class="nav-link" href="#">Mis Juegos</a>
-                    </li>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
 
+                            <li class="nav-item mis">
+                                <a class="nav-link" href="#">Mis Juegos</a>
+                            </li>
 
-                </ul>
-                        <button class="inicia-sesion-btn" data-bs-placement="bottom"><?php echo substr($nombre_usuario, 0, 1); ?></button>
+                        </ul>
+                        <button class=" <?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?> inicia-sesion-btn " data-bs-placement="bottom"><?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?></button>
+
                         <a href="cerrar_sesion.php" class="salir navbar-text"><i class="material-icons cerrar-sesion-icon">exit_to_app</i></a>
                     <?php
                     } else {

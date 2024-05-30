@@ -1,16 +1,55 @@
 <?php
 session_start();
 
-if (isset($_SESSION['id_usuario']) && $_SESSION['tipo'] == 'usuario') {
-    echo '<div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>';
-    echo '<script>
-        setTimeout(function() {
-            window.location.href = "user/usuario.php";
-        }, 3000); // 3 segundos
-    </script>';
-    exit();
+if (isset($_COOKIE['id_usuario']) && isset($_COOKIE['tipo']) && $_COOKIE['tipo'] == 'usuario') {
+    $_SESSION[ $_COOKIE['id_usuario']] = $_COOKIE['id_usuario'];
+    $_SESSION['tipo'] = $_COOKIE['tipo'];
+    echo '
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redireccionando...</title>
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <style>
+            
+            #loadingOverlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+            .spinner-border {
+                width: 3rem;
+                height: 3rem;
+                border-width: .3rem;
+            }
+            
+           
+        </style>
+    </head>
+    <body>
+    
+        <div id="loadingOverlay">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "user/usuario.php";
+            }, 2000); // 3 segundos
+        </script>
+    </body>
+    </html>';
+   
 }
 ?>
 <?php
@@ -114,8 +153,8 @@ $password = $_POST['password'];
                                                     //echo "<script>alert('Usuario registrado con éxito. Redireccionando a ingreso.php...')</script>";
                                                     
                                                     echo '<div id="etiqueta" class="alert alert-success" role="alert">
-                                                    Usuario registrado con éxito. Redireccionando a ingreso
-                                                </div>';
+                                                   Usuario registrado con éxito. Redireccionando a ingreso
+                                                 </div>';
                                                 echo "<script>setTimeout(function() { window.location.href = 'ingreso.php'; }, 3000);</script>";
                                                 } else {
                                                     // Error al registrar el usuario

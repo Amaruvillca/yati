@@ -1,5 +1,63 @@
 <?php
 session_start();
+
+if (isset($_COOKIE['id_usuario']) && isset($_COOKIE['tipo']) && $_COOKIE['tipo'] == 'usuario') {
+    $_SESSION[ $_COOKIE['id_usuario']] = $_COOKIE['id_usuario'];
+    $_SESSION['tipo'] = $_COOKIE['tipo'];
+    echo '
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redireccionando...</title>
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <style>
+           
+            #loadingOverlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+            .spinner-border {
+                width: 3rem;
+                height: 3rem;
+                border-width: .3rem;
+            }
+            .imagen{
+                display: flex;
+    align-items: center;
+    justify-content: center;
+            }
+           
+        </style>
+    </head>
+    <body>
+    
+        <div id="loadingOverlay">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "user/usuario.php";
+            }, 2000); // 3 segundos
+        </script>
+    </body>
+    </html>';
+   
+}
+?>
+<?php
+session_start();
 $gmail = $_POST['email'];
 $contrasena = $_POST['password'];
 
@@ -87,6 +145,9 @@ require_once 'conexion.php';
                                                
                                                 $_SESSION['id_usuario'] = $id_usuario;
                                                 $_SESSION['tipo'] = $tipo;
+                                                // Guardar la sesión en una cookie
+                                                setcookie('id_usuario', $id_usuario, time() + (86400 * 30), "/"); // 30 días
+                                                setcookie('tipo', $tipo, time() + (86400 * 30), "/"); // 30 días
                                     
                                                 if ($tipo == 'administrador') {
                                                     header("Location: admin/admin.php");
