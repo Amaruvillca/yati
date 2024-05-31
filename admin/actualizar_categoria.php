@@ -1,30 +1,24 @@
 <?php
-require_once '../conexion.php'; // Asegúrate de que este archivo tenga la lógica de conexión a tu base de datos
+require_once '../conexion.php';
+$conexion = new Conexion();
+$conn = $conexion->obtenerConexion();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $id_categoria = $_POST['id_categoria'];
-    $nombre_categoria = $_POST['nombre_categoria'];
+$idCategoria = $_POST['id_categoria'];
+$nombreCategoria = $_POST['nombre_categoria'];
+$descripcionCategoria = $_POST['descripcion_categoria'];
+$imagenCategoria = isset($_FILES['imagen_categoria']['tmp_name']) ? file_get_contents($_FILES['imagen_categoria']['tmp_name']) : null;
 
-    // Validar y sanitizar los datos (te recomiendo utilizar funciones como filter_var o mysqli_real_escape_string)
+if ($imagenCategoria) {
+    $stmt = $conn->prepare("UPDATE categoria SET nombre_categoria = ?, descripcion_categoria = ?, imagen_categoria = ? WHERE id_categoria = ?");
+    $stmt->bind_param("sssi", $nombreCategoria, $descripcionCategoria, $imagenCategoria, $idCategoria);
+} else {
+    $stmt = $conn->prepare("UPDATE categoria SET nombre_categoria = ?, descripcion_categoria = ? WHERE id_categoria = ?");
+    $stmt->bind_param("ssi", $nombreCategoria, $descripcionCategoria, $idCategoria);
+}
 
-    // Actualizar los datos en la base de datos
-    $conexion = new Conexion();
-    $conn = $conexion->obtenerConexion();
-
-    $stmt = $conn->prepare("UPDATE categoria SET nombre_categoria = ? WHERE id_categoria = ?");
-    $stmt->bind_param("si", $nombre_categoria, $id_categoria);
-    $stmt->execute();
-
-    // Verificar si la actualización fue exitosa
-    if ($stmt->affected_rows > 0) {
-        echo "success";
-    } else {
-        echo "error";
-    }
-
-    // Cerrar la conexión y el statement
-    $stmt->close();
-    $conn->close();
+if ($stmt->execute()) {
+    echo "success";
+} else {
+    echo "error";
 }
 ?>
