@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 
 if (isset($_COOKIE['id_usuario']) && isset($_COOKIE['tipo']) && $_COOKIE['tipo'] == 'usuario') {
