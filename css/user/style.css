@@ -3,6 +3,7 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra */
 }
 
+
 .logo img {
     width: 50px;
     margin-left: 15px;
@@ -71,6 +72,7 @@
    color: black; 
 
 }
+
 @media (max-width: 992px) {
     .busqueda {
         width: auto !important; /* Full width when collapsed */
@@ -101,7 +103,9 @@
     justify-content: center;
     margin: 0px !important;
 }
+
 }
+
 .botones{
     display: flex;
     align-items: center;
@@ -284,3 +288,4 @@ list-style: none;
 .usucomp a {
     margin-right: 10px;
 }
+

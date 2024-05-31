@@ -1,0 +1,11 @@
+.misju{
+    display: none !important;
+}
+@media (max-width: 992px) {
+    .misju{
+    display: inline !important;
+}
+}
+body{
+    background-color: #f0f2f5 !important;
+}

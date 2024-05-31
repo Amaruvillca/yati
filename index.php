@@ -99,7 +99,7 @@ $password = $_POST['password'];
                                     <div class="formulario--formulario__campos">
                                         <label for="email">Correo Electrónico:</label>
                                         <input type="email" class="form-control" placeholder="afsfsdsd@gmail.com" aria-label="Username" aria-describedby="basic-addon1" name="email" id="email" value="<?php  echo $email ?>" required>
-                                        <div id="emailError" class="error">El correo electrónico debe contener un '@' o un .</div>
+                                        <div id="emailError" class="error">El correo electrónico debe contener un '@' y un .</div>
                                     </div>
                                     <div class="formulario--formulario__campos">
                                         <label for="password">Contraseña:</label>

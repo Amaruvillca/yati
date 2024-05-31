@@ -20,6 +20,12 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
 
     $conexion->cerrarConexion();
 }
+$conexion = new Conexion();
+$conn = $conexion->obtenerConexion();
+
+// Consulta SQL para obtener todas las categorías de juegos
+$sql = "SELECT id_categoria, nombre_categoria FROM categoria";
+$result = $conn->query($sql);
 ?>
 
 <link rel="icon" type="image/png" href="../img/l7.png">
@@ -27,9 +33,12 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
 <script src="../js/bootrap/js/bootstrap.bundle.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="../css/user/style.css">
+<link rel="stylesheet" href="../css/user/user.css">
 
 </head>
-
+<style>
+   
+</style>
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -60,18 +69,18 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
                         <?php
                         if ($estado) {
                         ?>
-                        <div class="usucomp">
-                            <button class=" <?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?> inicia-sesion-btn " data-bs-placement="bottom"><?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?></button>
-                            <p><?php echo $nombre_usuario; ?></p>
-                        </div>
-                        <div class="usucomp">
-                        <a href="cerrar_sesion.php" class="salir navbar-text"><i class="material-icons cerrar-sesion-icon">exit_to_app</i></a>
-                            <a href="cerrar_sesion.php">Cerrar Sesion</a>
-                        </div>
+                            <div class="usucomp">
+                                <button class=" <?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?> inicia-sesion-btn " data-bs-placement="bottom"><?php echo strtoupper(substr($nombre_usuario, 0, 1)); ?></button>
+                                <p><?php echo $nombre_usuario; ?></p>
+                            </div>
+                            <div class="usucomp">
+                                <a href="cerrar_sesion.php" class="salir navbar-text"><i class="material-icons cerrar-sesion-icon">exit_to_app</i></a>
+                                <a href="cerrar_sesion.php">Cerrar Sesion</a>
+                            </div>
                         <?php
                         } else {
-                            echo '   <a href="#">Iniciar sesión</a>
-                    <a href="#">Regístrate</a>';
+                            echo '   <a href="../ingreso.php">Iniciar sesión</a>
+                    <a href="../index.php">Regístrate</a>';
                         }
                         ?>
                     </div>
@@ -80,19 +89,34 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text categorias">
+                <?php
+                    if ($estado) {
+                    ?>
+                        <ul class=" misju navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
+
+                            <li class="nav-item ">
+                                <a class=" misju nav-link" href="#">Mis Juegos</a>
+                            </li>
+
+                        </ul>
+                    <?php
+                    }
+                    ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorias
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                            <?php
+                            // Iterar sobre los resultados de la consulta y mostrar las opciones del menú
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<li><a class='dropdown-item' href='#'>" . $row['nombre_categoria'] . "</a></li>";
+                            }
+                            ?>
                         </ul>
                     </li>
+                  
                 </ul>
                 <form class="d-flex mx-2 busqueda navbar-text " role="search">
                     <div class="input-group">
@@ -140,8 +164,8 @@ if (!isset($_SESSION['id_usuario']) && $_SESSION['tipo'] !== 'usuario') {
                         <a href="cerrar_sesion.php" class="salir navbar-text"><i class="material-icons cerrar-sesion-icon">exit_to_app</i></a>
                     <?php
                     } else {
-                        echo '<button class="btn btn-primary espacio orange" >Iniciar Sesión</button>
-                        <button type="button" class="btn btn-outline-dark espacio regi">Registrarse</button>';
+                        echo '<a href="../ingreso.php" ><button class="btn btn-primary espacio orange" >Iniciar Sesión</button></a>
+                        <a href="../index.php"><button type="button" class="btn btn-outline-dark espacio regi">Registrarse</button></a>';
                     }
                     ?>
 

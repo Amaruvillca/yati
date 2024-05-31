@@ -166,3 +166,10 @@ INSERT INTO juegos (
     'En revisión',
     NOW() -- Fecha de creación
 );
+select* from usuarios;
+select* from categoria;
+select * from juegos;
+ALTER TABLE categoria
+ADD imagen_categoria LONGBLOB AFTER nombre_categoria,
+ADD descripcion_categoria VARCHAR(100) AFTER imagen_categoria;
+
