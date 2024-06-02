@@ -82,7 +82,12 @@ require_once 'conexion.php';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
-
+<style>
+    /* body{
+        display: grid;
+        place-content: center;
+    } */
+</style>
 <body>
     <main>
         <div class="container">
