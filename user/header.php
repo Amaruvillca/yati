@@ -41,6 +41,7 @@ $result = $conn->query($sql);
 </style>
 <body>
 
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="icon-container d-lg-none colap">
             <button class="btn btn-outline-secondary bonton_icono col" type="button" data-bs-toggle="modal" data-bs-target="#busquedaModal">
@@ -175,6 +176,9 @@ $result = $conn->query($sql);
         </div>
         </div>
     </nav>
+    
+
+    
 
     <!-- Modal para la barra de búsqueda -->
     <div class="modal fade" id="busquedaModal" tabindex="-1" aria-labelledby="busquedaModalLabel" aria-hidden="true">

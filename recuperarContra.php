@@ -99,12 +99,15 @@ $email = $_POST['email'];
                                                             text-align: center;
                                                         }
                                                         img{
-                                                            width: 100px;}
+                                                            width: 150px;
+                                                            border-radius: 50% !important;
+                                                            
+                                                        }
                                                     </style>
                                                 </head>
                                                 <body>
                                                     <div class="container">
-                                                    <img src="https://lh3.googleusercontent.com/ogw/AF2bZyhT_fcpE_Un89i9zQKIVxhy-DUlRkXkyzMM3_4C3XAsbQ=s32-c-mo" alt="Imagen centrada" />
+                                                    <img src="https://tse3.mm.bing.net/th/id/OIG4.Rx7Y54byf8UHsqf_y63C?pid=ImgGn" alt="Imagen centrada" />
                                                      <center><h1>Yatiñi</h1></center> <br>
                                                         <h3>Token de verificación:</h3>
                                                         <p class="token">' . $token . '</p>
