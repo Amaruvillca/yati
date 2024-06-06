@@ -48,7 +48,7 @@
                             <img src="../img/l.jpeg" class="d-block w-100" alt="...">
                         </div>
                         <div class=" slider_con col-lg-6 col-sm-12 d-flex align-items-center">
-                            <div>
+                            <div class="descripcion">
                                 <h1>TV</h1>
                                 <p>Descripción para la segunda imagen.</p>
                             </div>

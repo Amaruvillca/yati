@@ -154,8 +154,8 @@ $password = $_POST['password'];
                                                     //echo "<script>alert('Usuario registrado con éxito. Redireccionando a ingreso.php...')</script>";
                                                     
                                                     echo '<div id="etiqueta" class="alert alert-success" role="alert">
-                                                   Usuario registrado con éxito. Redireccionando a ingreso
-                                                 </div>';
+                                                Usuario registrado con éxito. Redireccionando a ingreso
+                                                </div>';
                                                 echo "<script>setTimeout(function() { window.location.href = 'ingreso.php'; }, 3000);</script>";
                                                 } else {
                                                     // Error al registrar el usuario
