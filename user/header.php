@@ -96,7 +96,7 @@ $result = $conn->query($sql);
                         <ul class=" misju navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
 
                             <li class="nav-item ">
-                                <a class=" misju nav-link" href="#">Mis Juegos</a>
+                                <a class=" misju nav-link" href="#" style="color: black;">Mis Juegos</a>
                             </li>
 
                         </ul>
@@ -104,7 +104,7 @@ $result = $conn->query($sql);
                     }
                     ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
                             Categorias
                         </a>
                         <ul class="dropdown-menu">
@@ -135,7 +135,7 @@ $result = $conn->query($sql);
                         <a class="nav-link active" aria-current="page" href="#">publicar un juego</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Top Juegos</a>
+                        <a class="nav-link" href="#" style="color: black;">Top Juegos</a>
                     </li>
 
 
@@ -156,7 +156,7 @@ $result = $conn->query($sql);
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
 
                             <li class="nav-item mis">
-                                <a class="nav-link" href="#">Mis Juegos</a>
+                                <a class="nav-link" href="#" style="color: black;">Mis Juegos</a>
                             </li>
 
                         </ul>

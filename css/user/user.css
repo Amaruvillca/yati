@@ -31,7 +31,7 @@ width:  400px !important;
 .carousel-item {
     
     
-    height: auto;
+    
     
     width: 100%;
     }
@@ -69,6 +69,57 @@ width:  400px !important;
 }
 
 
+
+
+
+/* Fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+   
+  
+}
+
+.descripcion p{
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.descripcion p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.descripcion .titulo{
+    margin-top: 10px;
+    text-align: center;
+}
+.descripcion p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+
+}
+.imageca{
+    width:70% !important;
+    height:380px !important;
+}
+
+.content p{
+    background-color: transparent;
+}
 
 
 
