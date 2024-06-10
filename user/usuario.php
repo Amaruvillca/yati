@@ -21,6 +21,9 @@
     <?php include('db.php'); ?>
 
 </head>
+<style>
+  
+</style>
 
 <body>
 
