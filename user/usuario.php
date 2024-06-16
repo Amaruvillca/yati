@@ -11,8 +11,7 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/user/user.css">
     <link rel="stylesheet" href="../css/user/tragetas.css">
@@ -29,7 +28,7 @@
             <?php endforeach; ?>
         </div>
         <div class="carousel-inner">
-        <?php foreach ($categorias as $index => $categoria): ?>
+            <?php foreach ($categorias as $index => $categoria) : ?>
                 <div class="carousel-item <?= $index == 0 ? 'active' : '' ?>">
                     <div class="container">
                         <div class="row">
@@ -131,14 +130,120 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+1" alt="Juego Favorito 1">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 1</h5>
+                        <p class="card-text game-card-text">¡Disfruta de una experiencia increíble!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+2" alt="Juego Favorito 2">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 2</h5>
+                        <p class="card-text game-card-text">¡Aventuras sin fin te esperan!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+3" alt="Juego Favorito 3">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 3</h5>
+                        <p class="card-text game-card-text">¡Descubre nuevos mundos!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+4" alt="Juego Favorito 4">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 4</h5>
+                        <p class="card-text game-card-text">¡Un desafío a cada paso!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+1" alt="Juego Favorito 1">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 1</h5>
+                        <p class="card-text game-card-text">¡Disfruta de una experiencia increíble!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+2" alt="Juego Favorito 2">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 2</h5>
+                        <p class="card-text game-card-text">¡Aventuras sin fin te esperan!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+3" alt="Juego Favorito 3">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 3</h5>
+                        <p class="card-text game-card-text">¡Descubre nuevos mundos!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card game-card">
+                    <img src="https://via.placeholder.com/300x300.png?text=Juego+Favorito+4" alt="Juego Favorito 4">
+                    <div class="card-body">
+                        <h5 class="card-title game-card-title">Juego Favorito 4</h5>
+                        <p class="card-text game-card-text">¡Un desafío a cada paso!</p>
+                        <a href="#" class="btn game-card-button">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+        
+                
+            </style>
+        </div>
+        <div style="position: relative;">
+
+            <div class="category-container" id="categoryContainer">
+
+            <?php foreach ($categorias as $index => $categoria) : ?>
+                
+                                        
+                <div class="category"><?= $categoria['nombre_categoria'] ?></div>                    
+            <?php endforeach; ?>
+                
+              
+            </div>
+
+        </div>
         <div class="row">
             <h2 class="my-4">Todos los Juegos</h2>
             <!-- Agrega más tarjetas de juegos aquí -->
         </div>
     </div>
-<!-- Resto del HTML aquí -->
+    <!-- Resto del HTML aquí -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -153,6 +258,8 @@
             });
         });
     </script>
-</body>
+   
 
-</html>
+    
+
+    <?php include('footer.php'); ?>

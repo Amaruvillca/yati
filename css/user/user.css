@@ -124,5 +124,36 @@ body {
 .titulo{
     font-size: 18px !important;
 }
+.category-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.category-container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+.category {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.category:last-child {
+    margin-right: 0;
+}
 
-
+.scroll-left {
+    left: 10px;
+}
+.scroll-right {
+    right: 10px;
+}
