@@ -12,6 +12,7 @@ body{
 .carousel{
 margin-top: 100px;
 width: 100% !important;
+
 }
 
 
@@ -120,8 +121,8 @@ body {
 .content p{
     background-color: transparent;
 }
-
-
-
+.titulo{
+    font-size: 18px !important;
+}
 
 

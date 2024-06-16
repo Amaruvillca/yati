@@ -37,7 +37,7 @@ $result = $conn->query($sql);
 
 </head>
 <style>
-   
+
 </style>
 <body>
 
@@ -54,7 +54,8 @@ $result = $conn->query($sql);
         <a class="navbar-brand logo" href="#">
             <img src="../img/l7.png" alt="logo">
             <div class="navbar-text">
-                Yatiñi
+                
+                <div class="titulo">Edukids</div>
             </div>
         </a>
 
