@@ -20,11 +20,6 @@
     <?php include('header.php'); ?>
     <?php include('db.php'); ?>
 
-</head>
-<style>
-  
-</style>
-
 <body>
 
     <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
@@ -143,6 +138,7 @@
             <!-- Agrega más tarjetas de juegos aquí -->
         </div>
     </div>
+<!-- Resto del HTML aquí -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
