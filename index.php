@@ -67,7 +67,7 @@ $password = $_POST['password'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatiñi Login</title>
+    <title>Edukids Login</title>
     <link rel="icon" type="image/png" href="img/l7.png">
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -87,7 +87,7 @@ $password = $_POST['password'];
                     <div class="regisrto">
                         <div class="formulario">
                             <img class="formulario--logo" src="img/l7.png" alt="logo">
-                            <h2 class="fromulario--titulo">Unete a Yatiñi</h2>
+                            <h2 class="fromulario--titulo">Unete a Edukids</h2>
                             <div class="formulario--formulario">
                                 <form id="registroForm" action="index.php" method="post">
                                     <div class="formulario--formulario__campos">

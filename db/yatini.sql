@@ -172,4 +172,83 @@ select * from juegos;
 ALTER TABLE categoria
 ADD imagen_categoria LONGBLOB AFTER nombre_categoria,
 ADD descripcion_categoria VARCHAR(100) AFTER imagen_categoria;
+CREATE TABLE favoritos (
+    id_favorito INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    id_juego INT NOT NULL,
+    fecha_agregado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_juego) REFERENCES juegos(id_juego)
+);
+CREATE TABLE comentarios (
+    id_comentario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    comentario TEXT NOT NULL,
+    fecha_comentario TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_usuario INT NOT NULL,
+    id_juego INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_juego) REFERENCES juegos(id_juego)
+);
+CREATE TABLE historial_juego (
+    id_historial INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    id_juego INT NOT NULL,
+    fecha_juego TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_juego) REFERENCES juegos(id_juego)
+);
+-- Añadir 20 calificaciones a la tabla califica
+INSERT INTO califica (Puntuacion, id_juego, id_usuario) VALUES 
+(5, 3, 1),
+(5, 3, 1),
+(3, 3, 1),
+(5, 3, 2),
+(5, 3, 2),
+(5, 4, 2),
+(5, 4, 3),
+(5, 4, 3),
+(5, 4, 3),
+(5, 5, 4),
+(5, 5, 4),
+(5, 5, 4),
+(5, 5, 5),
+(5, 5, 5),
+(5, 5, 5),
+(5, 5, 6),
+(5, 5, 6),
+(5, 3, 6),
+(5, 1, 7),
+(5, 2, 7);
+CREATE VIEW juegos_populares AS
+SELECT j.id_juego, j.nombre_juego, j.imagen_juego, j.Descripcion, c.nombre_categoria, AVG(cal.Puntuacion) AS promedio_puntuacion
+FROM juegos j
+JOIN categoria c ON j.id_categoria = c.id_categoria
+JOIN califica cal ON j.id_juego = cal.id_juego
+GROUP BY j.id_juego, j.nombre_juego, j.imagen_juego, j.Descripcion, c.nombre_categoria
+HAVING promedio_puntuacion >= 4.5;
+SELECT * FROM juegos_populares;
+-- Añadir más calificaciones con puntuaciones altas
+INSERT INTO califica (Puntuacion, id_juego, id_usuario) VALUES 
+(5, 1, 8),
+(5, 1, 9),
+(5, 2, 10),
+(5, 2, 11),
+(4, 3, 12),
+(5, 3, 13),
+(5, 1, 14),
+(5, 1, 15),
+(5, 2, 16),
+(5, 2, 17),
+(4, 3, 18),
+(5, 3, 19),
+(5, 1, 20),
+(5, 1, 21),
+(5, 2, 22),
+(5, 2, 23),
+(4, 3, 24),
+(5, 3, 25);
+select * from juegos;
+
+
+
 

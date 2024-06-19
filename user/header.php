@@ -51,7 +51,7 @@ $result = $conn->query($sql);
                 <i class="material-icons">notifications</i>
             </button>
         </div>
-        <a class="navbar-brand logo" href="#">
+        <a class="navbar-brand logo" href="usuario.php">
             <img src="../img/l7.png" alt="logo">
             <div class="navbar-text">
                 
@@ -59,7 +59,8 @@ $result = $conn->query($sql);
             </div>
         </a>
 
-        <button class="navbar-toggler botonam" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <button class="navbar-toggler botonam" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation" style="margin-right: 15px;">
+
             <span class="navbar-toggler-icon"></span>
 
 

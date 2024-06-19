@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background: url('https://via.placeholder.com/1200x400.png?text=Imagen+de+Portada') no-repeat center center;
+    background: url('https://i.pinimg.com/564x/aa/9e/04/aa9e04aafb5359950cf3e1a1cb30cc12.jpg') no-repeat center center;
     background-size: cover;
     height: 300px;
     position: relative;
@@ -158,9 +158,7 @@ body {
     text-decoration: none;
 }
 
-.footer a:hover {
-    text-decoration: underline;
-}
+
 .category-container {
     display: flex;
     overflow-x: auto;
