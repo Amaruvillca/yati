@@ -133,9 +133,7 @@ $result = $conn->query($sql);
                     </button>
                 </form>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">publicar un juego</a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="#" style="color: black;">Top Juegos</a>
                     </li>
@@ -149,7 +147,19 @@ $result = $conn->query($sql);
                     <button class="btn btn-outline-secondary voz espacio fav" type="button">
                         <i class="material-icons">favorite</i>
                         <a class="nav-link p" href="#">Favoritos</a>
+                       
                     </button>
+                    <li class="nav-item favvv" style="margin-right: 2px;">
+                        <a class="nav-link" href="#" style="color: black;">Favoritos</a>
+                    </li>
+                    <style>
+                        @media (max-width: 992px) {
+.favvv{
+    display: none;
+}
+                        }
+                    </style>
+                    
                 </div>
                 <div class="botones">
                     <?php
@@ -158,7 +168,7 @@ $result = $conn->query($sql);
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 navbar-text  listas">
 
                             <li class="nav-item mis">
-                                <a class="nav-link" href="#" style="color: black;">Mis Juegos</a>
+                                <a class="nav-link" href="misjuegos.php" style="color: black;">Mis Juegos</a>
                             </li>
 
                         </ul>

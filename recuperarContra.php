@@ -108,7 +108,7 @@ $email = $_POST['email'];
                                                 <body>
                                                     <div class="container">
                                                     <img src="https://tse3.mm.bing.net/th/id/OIG4.Rx7Y54byf8UHsqf_y63C?pid=ImgGn" alt="Imagen centrada" />
-                                                     <center><h1>Yatiñi</h1></center> <br>
+                                                     <center><h1>Edukids</h1></center> <br>
                                                         <h3>Token de verificación:</h3>
                                                         <p class="token">' . $token . '</p>
                                                         <p>Copie el código y péguelo en la página web para restablecer su contraseña</p>

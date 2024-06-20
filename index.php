@@ -150,12 +150,11 @@ $password = $_POST['password'];
                                                 // Insertar el nuevo usuario en la base de datos
                                                 $sql = "INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo) VALUES ('$nombre', '$email', '$password', 'usuario')";
                                                 if ($conn->query($sql) === TRUE) {
-                                                    // Usuario registrado con éxito
-                                                    //echo "<script>alert('Usuario registrado con éxito. Redireccionando a ingreso.php...')</script>";
                                                     
                                                     echo '<div id="etiqueta" class="alert alert-success" role="alert">
                                                 Usuario registrado con éxito. Redireccionando a ingreso
                                                 </div>';
+                                                
                                                 echo "<script>setTimeout(function() { window.location.href = 'ingreso.php'; }, 3000);</script>";
                                                 } else {
                                                     // Error al registrar el usuario
