@@ -149,7 +149,7 @@ $result = $conn->query($sql);
                         <a class="nav-link p" href="#">Favoritos</a>
                        
                     </button>
-                    <li class="nav-item favvv" style="margin-right: 2px;">
+                    <li class="nav-item favvv" style="margin-right: 30px;">
                         <a class="nav-link" href="#" style="color: black;">Favoritos</a>
                     </li>
                     <style>

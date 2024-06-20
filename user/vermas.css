@@ -1,243 +1,220 @@
-/* styles.css */
 body {
     background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
+h3 {
+    font-weight: bold;
 }
 
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.video-info {
+    margin-top: 10px;
 }
 
-.video-details {
-    padding: 15px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.video-details h2 {
-    margin-bottom: 10px;
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: #fff;
 }
 
-.video-stats {
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-outline-success {
+    color: #198754;
+    border-color: #198754;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    color: #fff;
+}
+
+.btn-outline-info {
+    color: #0dcaf0;
+    border-color: #0dcaf0;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    color: #fff;
+}
+
+.btn-outline-dark {
+    color: #212529;
+    border-color: #212529;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background-color: #212529;
+    color: #fff;
+}
+
+.comment img {
+    width: 40px;
+    height: 40px;
+}
+
+.related-videos .list-group-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    align-items: flex-start;
 }
 
-.video-actions .btn {
-    margin-right: 10px;
-    background: none;
-    border: none;
-    color: #606060;
+.related-videos img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.related-videos h6 {
+    margin-bottom: 0.5rem;
+}
+
+.related-videos p {
+    margin-bottom: 0;
+}
+
+.related-videos p.text-muted {
+    font-size: 0.85rem;
+}
+
+.comment .btn-sm {
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.comment .btn-sm:hover {
+    background-color: #e9ecef;
+}
+
+.comment .btn-sm .fas {
+    margin-right: 5px;
+}
+.jugarahora {
+    background-color: #f3873f;
+    margin-top: 10px;
+    height: 50px; /* Ajuste la altura según el diseño deseado */
+    width: 140px; /* Ajuste el ancho según el diseño deseado */
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Para eliminar el subrayado predeterminado en los enlaces */
+    border: none; /* Eliminar el borde del botón */
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.video-actions .btn:hover {
-    color: #000;
+.jugarahora:hover {
+    background-color: #e57632; /* Cambio de color al pasar el ratón */
 }
-
-.video-description {
-    margin-bottom: 20px;
-}
-
-.comments-section {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.comments-section h3 {
-    margin-bottom: 20px;
-}
-
-.recommended-videos {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recommended-video {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.recommended-video img {
-    width: 120px;
-    height: 90px;
-    margin-right: 10px;
-}
-
-.recommended-video .video-info h4 {
-    font-size: 16px;
-    margin: 0 0 5px 0;
-}
-
-.recommended-video .video-info p {
-    margin: 0;
-    color: #606060;
-}
-
-.recommended-video .video-info span {
-    font-size: 14px;
-    color: #909090;
-}
-
-.card-img-top{
-    height: 500px !important;
-}
-.card-title,.card-text, .video-actions,.comments-section{
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30PX;
-}
-
-/* styles.css */
-
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.video-details {
-    padding: 15px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.video-details h2 {
-    margin-bottom: 10px;
-}
-
-.video-stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.video-actions {
-    display: flex;
-    align-items: center;
-}
-
-.video-actions .btn {
-    margin-right: 10px;
-    background: none;
-    border: none;
-    color: #606060;
-    cursor: pointer;
-}
-
-.video-actions .btn:hover {
-    color: #000;
-}
-
-.video-description {
-    margin-bottom: 20px;
-}
-
-.comments-section {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.comments-section h3 {
-    margin-bottom: 20px;
-}
-
-.recommended-videos {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.recommended-video {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.recommended-video img {
-    width: 120px;
-    height: 90px;
-    margin-right: 10px;
-}
-
-.recommended-video .video-info h4 {
-    font-size: 16px;
-    margin: 0 0 5px 0;
-}
-
-.recommended-video .video-info p {
-    margin: 0;
-    color: #606060;
-}
-
-.recommended-video .video-info span {
-    font-size: 14px;
-    color: #909090;
-}
-
 .rating {
-    display: inline-block;
+    font-size: 24px; /* Tamaño de las estrellas */
+    color: #ddd; /* Color de las estrellas vacías */
 }
 
 .rating .fa-star {
-    font-size: 24px;
     cursor: pointer;
-    color: #ccc;
 }
 
-.rating .fa-star.checked {
-    color: #ffca28;
+.rating .fa-star:hover,
+.rating .fa-star:hover ~ .fa-star {
+    color: #fdd835; /* Color de las estrellas al pasar el ratón */
 }
-.jugarahora{
-    background-color: #f3873f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 10px; 
-    margin-left: 80px;
-    margin-bottom: 10px;
+
+.rating .fa-star.fas {
+    color: #fdd835; /* Color de las estrellas pintadas */
 }
-.jugarahora:only-child{
-    background-color: #f3873f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.sepa{
+    margin-right: 10px;
+}
+#favoriteBtn {
+    display: inline-block;
+    padding: 8px 16px;
     font-size: 16px;
-    margin-top: 10px; 
-    margin-left: 80px;
-    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#favoriteBtn:hover {
+    background-color: #f8d7da; /* Color de fondo al pasar el ratón (rojo claro) */
+    color: #721c24; /* Color de texto al pasar el ratón (rojo oscuro) */
+}
+
+#favoriteBtn.favorited {
+    color: #dc3545; /* Color del corazón lleno (rojo) */
+}
+
+#favoriteBtn.favorited:hover {
+    background-color: #dc3545; /* Color de fondo al pasar el ratón (rojo) */
+    color: #fff; /* Color de texto al pasar el ratón (blanco) */
+}
+
+#favoriteBtn .fas,
+#favoriteBtn .far {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos específicos para el corazón vacío (far) y lleno (fas) */
+#favoriteBtn .fas.fa-heart {
+    color: #dc3545; /* Color del corazón lleno (rojo) */
+}
+
+#favoriteBtn .far.fa-heart {
+    color: #ccc; /* Color del corazón vacío (gris claro) */
+}
+/* Estilos para la Ventana Modal */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #f3873f; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    border-bottom: none; /* Sin borde inferior en el encabezado */
+    border-radius: 10px 10px 0 0; /* Borde redondeado en la parte superior */
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.share-option {
+    width: 100%;
+    text-align: left;
+}
+
+.share-option i {
+    margin-right: 10px;
 }
 

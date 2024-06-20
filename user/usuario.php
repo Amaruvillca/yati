@@ -382,7 +382,7 @@
 
     <!-- Registration End -->
    
-    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+    <!-- <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-indicators">
             <?php foreach ($categorias as $index => $categoria) : ?>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $index ?>" class="<?= $index == 0 ? 'active' : '' ?>" aria-current="true" aria-label="Slide <?= $index + 1 ?>"></button>
@@ -418,7 +418,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div> -->
 
 
 <style>
