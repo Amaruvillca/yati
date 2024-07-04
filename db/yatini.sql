@@ -248,6 +248,7 @@ INSERT INTO califica (Puntuacion, id_juego, id_usuario) VALUES
 (4, 3, 24),
 (5, 3, 25);
 select * from juegos;
+select * from categoria;
 
 
 

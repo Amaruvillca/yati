@@ -55,7 +55,7 @@ $result = $conn->query($sql);
             <img src="../img/l7.png" alt="logo">
             <div class="navbar-text">
                 
-                <div class="titulo">Edukids</div>
+                <div class="titulo">Yatiñi</div>
             </div>
         </a>
 

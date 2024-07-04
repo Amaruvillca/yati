@@ -87,7 +87,7 @@ $password = $_POST['password'];
                     <div class="regisrto">
                         <div class="formulario">
                             <img class="formulario--logo" src="img/l7.png" alt="logo">
-                            <h2 class="fromulario--titulo">Unete a Edukids</h2>
+                            <h2 class="fromulario--titulo">Únete a Yatiñi</h2>
                             <div class="formulario--formulario">
                                 <form id="registroForm" action="index.php" method="post">
                                     <div class="formulario--formulario__campos">
@@ -150,6 +150,7 @@ $password = $_POST['password'];
                                                 // Insertar el nuevo usuario en la base de datos
                                                 $sql = "INSERT INTO usuarios (nombre_usuario, gmail, contrasena, tipo) VALUES ('$nombre', '$email', '$password', 'usuario')";
                                                 if ($conn->query($sql) === TRUE) {
+                                                    
                                                     
                                                     echo '<div id="etiqueta" class="alert alert-success" role="alert">
                                                 Usuario registrado con éxito. Redireccionando a ingreso
